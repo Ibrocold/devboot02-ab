@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS address_book;
 USE address_book;
 
-DROP Table contacts;
+DROP Table IF EXISTS contacts;
 
 CREATE TABLE contacts (
     id INT AUTO_INCREMENT PRIMARY KEY,
