@@ -10,11 +10,7 @@ on:
       - ci-actions
 
 # Define Jobs: db setup and app build jobs
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    services:
-    steps:
+
 
 # Part 1: db Setup and test
 jobs:
