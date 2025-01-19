@@ -1,4 +1,4 @@
-# Define Workflow Triggers
+# Define Workflow Triggers new
 name: CI Pipeline for Python App
 
 on:
