@@ -3,10 +3,10 @@ name: CI Pipeline for Python App new
 on:
   push:
     branches:
-      - ci-actions-mysql
+      - ci-actions
   pull_request:
     branches:
-      - ci-actions-mysql
+      - ci-actions
 
 jobs:
   build:
@@ -75,8 +75,8 @@ jobs:
       # Step 10: Upload zipped artifact to S3
       - name: Upload artifact to S3
         run: |
-          aws s3 cp ${{ env.ARTIFACT_NAME }} s3://simartefacts/
-          aws s3 ls s3://simartefacts/
+          aws s3 cp ${{ env.ARTIFACT_NAME }} s3://ciartefacts/
+          aws s3 ls s3://ciartefacts/
         env:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -98,7 +98,7 @@ jobs:
         run: |
             curl -s --user "api:${{ secrets.MAILGUN_API_KEY }}" \
             https://api.mailgun.net/v3/ \
-            -F from="CI Pipeline <mailgun@devforge.cc>" \
+            -F from="CI Pipeline <mailgun@jadoobabs.com>" \
             -F to="ibrahimbello349@gmail.com" \
             -F subject="CI Pipeline Status: Failure" \
             -F text="The CI pipeline has failed. Please check the logs."
