@@ -1,4 +1,4 @@
-name: CI Pipeline for Python App
+name: CI Pipeline for Python App new
 
 on:
   push:
