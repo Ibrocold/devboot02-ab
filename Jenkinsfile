@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'dev', url: 'https://github.com/faith-nte/capstone'
+                git branch: 'main', url: 'https://github.com/Ibrocold/devboot02-ab'
             }
         }
 
