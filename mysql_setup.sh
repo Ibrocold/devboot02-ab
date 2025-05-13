@@ -24,6 +24,7 @@ chmod 600 /root/.my.cnf
 echo "Make VAR folder for mysql"
 mkdir -p /var/run/mysqld
 chown mysql:mysql /var/run/mysqld
+service mysql start
 
 
 # Step 3: Set MySQL root password and switch to native password auth
