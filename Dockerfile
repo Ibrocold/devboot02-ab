@@ -29,5 +29,6 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 COPY mysql_setup.sh /mysql_setup.sh
 RUN chmod +x /mysql_setup.sh
+RUN ./mysql_setup.sh
 
-ENTRYPOINT ["mysql_setup.sh" "/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
