@@ -5,8 +5,8 @@ MYSQL_PASSWORD="pa55word"
 
 # Step 1: Install MySQL Server
 echo "📦 Installing MySQL Server..."
-sudo apt update
-sudo apt install -y mysql-server
+apt update
+apt install -y mysql-server
 
 # Step 2: Create ~/.my.cnf to enable passwordless login
 echo "🔑 Creating MySQL client config..."
@@ -18,8 +18,8 @@ EOF
 
 chmod 600 ~/.my.cnf
 
-sudo cp ~/.my.cnf /root/
-sudo chmod 600 /root/.my.cnf
+cp ~/.my.cnf /root/
+chmod 600 /root/.my.cnf
 
 # Step 3: Set MySQL root password and switch to native password auth
 echo "🔧 Configuring MySQL authentication..."
