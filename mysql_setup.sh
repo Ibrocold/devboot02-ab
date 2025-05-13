@@ -21,8 +21,10 @@ chmod 600 ~/.my.cnf
 cp ~/.my.cnf /root/
 chmod 600 /root/.my.cnf
 
-echo "Start mysql server"
-systemctl start mysql
+echo "Make VAR folder for mysql"
+mkdir -p /var/run/mysqld
+chown mysql:mysql /var/run/mysqld
+
 
 # Step 3: Set MySQL root password and switch to native password auth
 echo "🔧 Configuring MySQL authentication..."
