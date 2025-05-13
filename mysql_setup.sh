@@ -21,6 +21,9 @@ chmod 600 ~/.my.cnf
 cp ~/.my.cnf /root/
 chmod 600 /root/.my.cnf
 
+echo "Start mysql server"
+systemctl start mysql
+
 # Step 3: Set MySQL root password and switch to native password auth
 echo "🔧 Configuring MySQL authentication..."
 mysql <<EOF
